@@ -11,7 +11,8 @@ from werkzeug.exceptions import BadRequest
 
 import octoprint.plugin
 from octoprint.events import Events
-from octoprint.server import admin_permission
+from octoprint.access import groups
+admin_permission = groups.GroupPermission(groups.ADMIN_GROUP)
 
 try:
 	import gcodex3g as gpx
