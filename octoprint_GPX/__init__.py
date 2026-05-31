@@ -255,6 +255,11 @@ class GPXPlugin(
 			return make_response("Invalid machineid. Upper or lower case letters and numbers only and 8 chars or less")
 		return None
 
+	# TemplatePlugin
+
+	def is_template_autoescaped(self):
+		return True
+
 	# BlueprintPlugin
 
 	def is_blueprint_csrf_protected(self):
