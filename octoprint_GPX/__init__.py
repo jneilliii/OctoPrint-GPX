@@ -256,6 +256,10 @@ class GPXPlugin(
 		return None
 
 	# BlueprintPlugin
+
+	def is_blueprint_csrf_protected(self):
+		return True
+	
 	@octoprint.plugin.BlueprintPlugin.route("/defaultmachine/<string:machineid>", methods=["GET"])
 	def defaultmachine(self, machineid, *args, **kwargs):
 		response = self.validate_machineid(machineid)
